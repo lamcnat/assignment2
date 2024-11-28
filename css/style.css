@@ -174,9 +174,10 @@ footer {
 /* Collection Section */
 .collection {
     display: grid;
-    grid-template-columns: 1fr 400px; /* Left column flexible, right column fixed width */
+    grid-template-columns: 1fr 400px;
     gap: 30px;
     margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 /* Photo Gallery (Left Column) */

@@ -20,19 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     readMoreButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const description = this.closest('.description');
-            const shortText = description.querySelector('.short-text');
-            const fullText = description.querySelector('.full-text');
-
-            // Toggle the visibility of the full text
-            if (fullText.style.display === 'none') {
-                fullText.style.display = 'block';
-                shortText.style.display = 'none'; // Hide the short text
-                this.textContent = 'Read Less'; // Change button text to "Read Less"
+            const section = this.closest('.read-more-section');
+            const fullText = section.querySelector('.full-text');
+            const dots = section.querySelector('.dots');
+            
+            if (fullText.style.display === "none") {
+                fullText.style.display = "block";
+                dots.style.display = "none";
+                this.textContent = "Read Less";
             } else {
-                fullText.style.display = 'none';
-                shortText.style.display = 'block'; // Show the short text again
-                this.textContent = 'Read More'; // Reset button text to "Read More"
+                fullText.style.display = "none";
+                dots.style.display = "inline";
+                this.textContent = "Read More";
             }
         });
     });
@@ -65,18 +64,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Read More button functionality
-    document.querySelector('.read-more').addEventListener('click', function() {
-        const fullText = document.querySelector('.full-text');
-        const dots = document.querySelector('.dots');
-        
-        if (fullText.style.display === "none") {
-            fullText.style.display = "block";
-            dots.style.display = "none";
-            this.textContent = "Read Less";
-        } else {
-            fullText.style.display = "none";
-            dots.style.display = "inline";
-            this.textContent = "Read More";
-        }
+    document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', function() {
+            const section = this.closest('.read-more-section');
+            const fullText = section.querySelector('.full-text');
+            const dots = section.querySelector('.dots');
+            
+            if (fullText.style.display === "none") {
+                fullText.style.display = "block";
+                dots.style.display = "none";
+                this.textContent = "Read Less";
+            } else {
+                fullText.style.display = "none";
+                dots.style.display = "inline";
+                this.textContent = "Read More";
+            }
+        });
     });
 });
