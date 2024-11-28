@@ -221,16 +221,6 @@ footer {
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-/* Model Viewer */
-.model-viewer {
-    background-color: #F4F1F6;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 400px;
 }
 
 .read-more {
@@ -241,12 +231,33 @@ footer {
     font-size: 0.8rem;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 0.5rem;
-    text-align: left;
+    margin-top: 1rem;
 }
 
 .read-more:hover {
     background-color: #654D50;
+}
+
+.dots {
+    display: inline;
+}
+
+.full-text {
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+.short-text {
+    margin-bottom: 0;
+}
+
+/* Model Viewer */
+.model-viewer {
+    background-color: #F4F1F6;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 400px;
 }
 
 /* Responsive Design */

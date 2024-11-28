@@ -64,21 +64,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Read More button functionality
-    document.querySelectorAll('.read-more').forEach(button => {
-        button.addEventListener('click', function() {
-            const section = this.closest('.read-more-section');
-            const fullText = section.querySelector('.full-text');
-            const dots = section.querySelector('.dots');
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.read-more').forEach((button, index) => {
+            button.setAttribute('data-section', index); // Add unique identifier
             
-            if (fullText.style.display === "none") {
-                fullText.style.display = "block";
-                dots.style.display = "none";
-                this.textContent = "Read Less";
-            } else {
-                fullText.style.display = "none";
-                dots.style.display = "inline";
-                this.textContent = "Read More";
-            }
+            button.addEventListener('click', function() {
+                const section = this.closest('.read-more-section');
+                const fullText = section.querySelector('.full-text');
+                const dots = section.querySelector('.dots');
+                const shortText = section.querySelector('.short-text');
+                
+                if (fullText.style.display === "none") {
+                    fullText.style.display = "block";
+                    dots.style.display = "none";
+                    this.textContent = "Read Less";
+                } else {
+                    fullText.style.display = "none";
+                    dots.style.display = "inline";
+                    this.textContent = "Read More";
+                }
+            });
         });
     });
 });
