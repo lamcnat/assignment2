@@ -1,0 +1,256 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F4F1F6;
+    /* Neutral light background */
+    color: #242F35;
+    /* Dark text for contrast */
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #d2efff;
+    /* Light blue */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+header .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #242F35;
+}
+
+header nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav a {
+    color: #242F35;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #8EB7D1;
+    /* Accent hover color */
+}
+
+/* Layout Grid */
+.exhibition {
+    display: grid;
+    gap: rem;
+    padding: 2rem;
+}
+
+/* Photo Section */
+.photo-section {
+    background-color: #8EB7D1;
+    padding: 5rem;
+    text-align: center;
+    color: #F4F1F6;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-section img {
+    width: 100%;
+    max-height:auto;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-section img:hover {
+    transform: scale(1.05);
+    /* Subtle zoom effect */
+}
+
+.photo-section h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Introduction Section */
+.introduction {
+    padding: 2rem 0;
+}
+
+.main-intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature {
+    background-color: #F4F1F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.feature p {
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Description Section */
+.description {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+.read-more {
+    background-color: #8EB7D1;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.read-more:hover {
+    background-color: #654D50;
+}
+
+/* Footer */
+footer {
+    background-color: #242F35;
+    color: #F4F1F6;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Collection Section */
+.collection {
+    display: grid;
+    grid-template-columns: 1fr 400px; /* Left column flexible, right column fixed width */
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+/* Photo Gallery (Left Column) */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.photo {
+    height: 400px;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Column */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Description Box */
+.description-box {
+    background-color: #d2efff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Read More Section */
+.read-more-section {
+    background-color: #F4F1F6;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Model Viewer */
+.model-viewer {
+    background-color: #F4F1F6;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 400px;
+}
+
+.read-more {
+    background-color: #8EB7D1;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.read-more:hover {
+    background-color: #654D50;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .collection {
+        grid-template-columns: 1fr;
+    }
+}
