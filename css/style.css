@@ -73,6 +73,7 @@ header nav a:hover {
     color: #F4F1F6;
     position: relative;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 .photo-section img {
@@ -155,6 +156,7 @@ header nav a:hover {
 
     .photo-section {
         padding: 3rem;
+        margin-top: 120px;
     }
     
     .photo-section img {
@@ -171,6 +173,7 @@ header nav a:hover {
 
     .photo-section {
         padding: 2rem;
+        margin-top: 150px;
     }
 }
 
