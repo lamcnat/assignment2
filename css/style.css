@@ -353,3 +353,24 @@ model-viewer {
     float: left;
     transition: width 0.3s;
 }
+
+.model-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#ar-button {
+    background-color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#ar-button:hover {
+    background-color: #f0f0f0;
+}
