@@ -31,6 +31,8 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 header .title {
@@ -75,7 +77,8 @@ header nav a:hover {
 
 .photo-section img {
     width: 100%;
-    max-height:auto;
+    height: auto;
+    max-width: 1200px;
     object-fit: cover;
     border-radius: 1rem;
     transition: transform 0.3s ease-in-out;
@@ -130,6 +133,44 @@ header nav a:hover {
 @media (max-width: 768px) {
     .features {
         grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 0.8rem 1rem;
+    }
+
+    header .title {
+        font-size: 1.4rem;
+    }
+
+    header nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+    }
+
+    .photo-section {
+        padding: 3rem;
+    }
+    
+    .photo-section img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .photo-section {
+        padding: 2rem;
     }
 }
 
