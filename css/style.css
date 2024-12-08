@@ -32,7 +32,7 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 header .title {
@@ -138,30 +138,25 @@ header nav a:hover {
 
     header {
         padding: 0.8rem 1rem;
-        flex-direction: column;
-        height: auto;
     }
 
     header .title {
         font-size: 1.4rem;
-        margin-bottom: 0.5rem;
     }
 
     header nav {
         width: 100%;
-        justify-content: space-around;
+        justify-content: center;
         margin-top: 0.5rem;
-        flex-wrap: wrap;
-        gap: 1rem;
     }
 
     header nav a {
         font-size: 0.9rem;
-        padding: 0.3rem 0.5rem;
     }
 
     .photo-section {
-        margin-top: 100px;
+        padding: 3rem;
+        margin-top: 120px;
     }
     
     .photo-section img {
@@ -176,19 +171,9 @@ header nav a:hover {
         gap: 0.8rem;
     }
 
-    header nav a {
-        width: 100%;
-        text-align: center;
-        padding: 0.5rem;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-
-    header nav a:last-child {
-        border-bottom: none;
-    }
-
     .photo-section {
-        margin-top: 140px;
+        padding: 2rem;
+        margin-top: 150px;
     }
 }
 
@@ -247,7 +232,10 @@ footer {
 }
 
 .photo {
-    height: 400px;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    max-height: 600px;
     overflow: hidden;
     border-radius: 1rem;
 }
@@ -256,6 +244,11 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo img:hover {
+    transform: scale(1.05);
 }
 
 /* Right Column */
@@ -317,19 +310,24 @@ footer {
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 500px;
-    position: relative;
-}
-
-.model-viewer #ar-button {
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
     .collection {
         grid-template-columns: 1fr;
+    }
+    
+    .photo {
+        min-height: 200px;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .photo {
+        min-height: 150px;
+        max-height: 300px;
     }
 }
 
