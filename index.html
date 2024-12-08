@@ -7,6 +7,8 @@
     <title>Jingdezhen Ware Collection</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
+    <!-- Import model-viewer component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -114,7 +116,21 @@
 
                         <div class="model-viewer">
                             <h2>3D Model</h2>
-                            <iframe src="your-model-link-1" title="3D Model Viewer"></iframe>
+                            <model-viewer
+                                src="./assets/3d model/bottle-shaped-vase-f1982-150k-2048-medium-100k-2048_std_draco.glb"
+                                ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="./assets/3d poster/poster1.webp" shadow-intensity="1">
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+                                <button slot="ar-button" id="ar-button">
+                                    View in your space
+                                </button>
+                                <div id="ar-prompt">
+                                    <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+                                </div>
+                            </model-viewer>
+
                         </div>
                     </div>
                 </section>
@@ -165,8 +181,9 @@
 
                         <div class="model-viewer">
                             <h2>3D Model</h2>
-                            <model-viewer src="f1980_191-150k-4096.glb" ar ar-modes="webxr scene-viewer quick-look"
-                                camera-controls tone-mapping="neutral" poster="./assets/3d poster/poster2.webp" shadow-intensity="1">
+                            <model-viewer src="./assets/3d model/f1980_191-150k-4096.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="./assets/3d poster/poster2.webp" shadow-intensity="1">
                                 <div class="progress-bar hide" slot="progress-bar">
                                     <div class="update-bar"></div>
                                 </div>
@@ -226,7 +243,19 @@
 
                         <div class="model-viewer">
                             <h2>3D Model</h2>
-                            <iframe src="your-model-link-3" title="3D Model Viewer"></iframe>
+                            <model-viewer src="./assets/3d model/F1980.190 194_baluster_vase-150k-4096.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="./assets/3d poster/poster3.webp" shadow-intensity="1">
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+                                <button slot="ar-button" id="ar-button">
+                                    View in your space
+                                </button>
+                                <div id="ar-prompt">
+                                    <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+                                </div>
+                            </model-viewer>
                         </div>
                     </div>
                 </section>
